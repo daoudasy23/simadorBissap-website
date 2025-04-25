@@ -91,6 +91,7 @@
       font-weight: bold;
     }
 
+    /* Animation for Scroll */
     .animate-on-scroll {
       opacity: 0;
       transform: translateY(40px);
@@ -101,6 +102,15 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .card {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
   </style>
 </head>
 <body>
@@ -130,6 +140,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
+        
       </ul>
     </div>
   </div>
@@ -148,40 +159,28 @@
 
 <!-- À propos -->
 <section id="about" class="bg-light">
-  <div class="container">
-    <div class="card shadow-lg mb-4">
-      <div class="card-body text-center">
-        <h2 class="card-title">À propos / About Us</h2>
-        <p class="card-text">Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
-        <p class="card-text">We partner with local women farmers in Senegal to provide top-quality hibiscus.</p>
-      </div>
-    </div>
+  <div class="container text-center">
+    <h2>À propos / About Us</h2>
+    <p>Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
+    <p>We partner with local women farmers in Senegal to provide top-quality hibiscus.</p>
   </div>
 </section>
 
 <!-- Produits -->
 <section id="product">
-  <div class="container">
-    <div class="card shadow-lg mb-4">
-      <div class="card-body text-center">
-        <h2 class="card-title">Nos produits / Our Product</h2>
-        <p class="card-text">Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
-        <p class="card-text">Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
-      </div>
-    </div>
+  <div class="container text-center">
+    <h2>Nos produits / Our Product</h2>
+    <p>Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
+    <p>Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
   </div>
 </section>
 
 <!-- Export -->
 <section id="export" class="bg-light">
-  <div class="container">
-    <div class="card shadow-lg mb-4">
-      <div class="card-body text-center">
-        <h2 class="card-title">Export / Expédition</h2>
-        <p class="card-text">MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
-        <p class="card-text">Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
-      </div>
-    </div>
+  <div class="container text-center">
+    <h2>Export / Expédition</h2>
+    <p>MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
+    <p>Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
   </div>
 </section>
 
@@ -261,5 +260,5 @@
   animatedElements.forEach(el => observer.observe(el));
 </script>
 </body>
-          </html>
-                                                                                             
+</html>
+        
