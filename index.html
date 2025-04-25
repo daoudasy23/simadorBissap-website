@@ -174,14 +174,19 @@
   </div>
 </section>
 
-<!-- Contact -->
+
+<!-- CONTACT -->
 <section id="contact">
-  <div class="container text-center contact">
-    <h2>Contact</h2>
-    <p>Pour plus d'informations ou pour demander un échantillon :</p>
-    <p>For more information or to request a sample:</p>
-    <p>Email : <a href="mailto:daoudasy23@gmail.com">daoudasy23@gmail.com</a></p>
-    <p>WhatsApp : <a href="https://wa.me/221769559907" target="_blank">+221 76 955 99 07</a></p>
+  <div class="container d-flex justify-content-center">
+    <div class="card shadow-lg p-4 animate-on-scroll" style="max-width: 600px; width: 100%;">
+      <div class="card-body text-center contact">
+        <h2 class="card-title">Contact</h2>
+        <p class="card-text">Pour plus d'informations ou pour demander un échantillon :</p>
+        <p class="card-text">For more information or to request a sample:</p>
+        <p class="card-text">Email : <a href="mailto:daoudasy23@gmail.com">daoudasy23@gmail.com</a></p>
+        <p class="card-text">WhatsApp : <a href="https://wa.me/221769559907" target="_blank">+221 76 955 99 07</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -192,20 +197,40 @@
   </a>
 </div>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2025 Simador Agro Exports – Made with ♥ in Kaolack</p>
+<!-- FOOTER -->
+<footer style="background-color: #13344b;">
+  <p class="text-white mb-0 py-3">&copy; 2025 Simador Agro Exports – Made with ♥ in Kaolack</p>
 </footer>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS POUR L’ANIMATION AU SCROLL -->
+<style>
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-in-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<!-- SCRIPT POUR DÉCLENCHER L’ANIMATION -->
 <script>
-  // Change navbar background on scroll
-  window.addEventListener('scroll', function () {
-    const nav = document.querySelector('.navbar');
-    nav.classList.toggle('navbar-scrolled', window.scrollY > 50);
-  });
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  animatedElements.forEach(el => observer.observe(el));
 </script>
+  
 
 </body>
 </html>
