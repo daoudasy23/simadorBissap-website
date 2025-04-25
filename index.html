@@ -1,119 +1,194 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simador Agro Exports</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    .navbar, footer {
-      background-color: #13344b;
+    .navbar {
+      transition: background-color 0.4s ease;
     }
 
-    .navbar-brand, .nav-link, footer p {
-      color: white !important;
+    .navbar-scrolled {
+      background-color: #13344b !important;
     }
 
-    .section-title {
-      margin: 40px 0 20px;
+    .hero {
+      background: url('Bissap1.jpg') center/cover no-repeat;
+      height: 90vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 30px 0;
       text-align: center;
     }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      padding: 30px;
+    .contact a {
+      text-decoration: none;
+      color: #0d6efd;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
+
+    .whatsapp-float img {
+      width: 50px;
     }
 
     .image-grid img {
       width: 100%;
       height: auto;
-      object-fit: cover;
       border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease-in-out;
-    }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .navbar-nav .nav-link {
+      margin-right: 20px;
     }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent shadow-sm">
   <div class="container">
-    <a class="navbar-brand" href="#">Simador Agro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon bg-light"></span>
+    <a class="navbar-brand fw-bold" href="#" style="color:black">Simador Agro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#images">Images</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#export">Export</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- SECTION IMAGES -->
-<section id="images" class="container">
-  <h2 class="section-title">Nos Produits</h2>
-  <div class="image-grid">
-    <img src="Bissap1.jpg" alt="Bissap 1">
-    <img src="Bissap1.jpg" alt="Bissap 2">
-    <img src="Bissap1.jpg" alt="Bissap 3">
-    <img src="Bissap1.jpg" alt="Bissap 4">
+<!-- Hero Section -->
+<section class="hero d-flex justify-content-center flex-column">
+  <div class="container">
+    <h1>Simador Agro Exports</h1>
+    <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
   </div>
 </section>
 
-<!-- SECTION CONTACT -->
-<section id="contact" class="py-5">
-  <div class="container d-flex justify-content-center">
-    <div class="card shadow-lg p-4 animate-on-scroll" style="max-width: 600px; width: 100%;">
-      <div class="card-body text-center">
-        <h2 class="card-title">Contact</h2>
-        <p class="card-text">Pour plus d'informations ou pour demander un échantillon :</p>
-        <p class="card-text">For more information or to request a sample:</p>
-        <p class="card-text">Email : <a href="mailto:daoudasy23@gmail.com">daoudasy23@gmail.com</a></p>
-        <p class="card-text">WhatsApp : <a href="https://wa.me/221769559907" target="_blank">+221 76 955 99 07</a></p>
+<!-- À propos -->
+<section id="about" class="bg-light">
+  <div class="container text-center">
+    <h2>À propos / About Us</h2>
+    <p>Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
+    <p>We partner with local women farmers in Senegal to provide top-quality hibiscus.</p>
+  </div>
+</section>
+
+<!-- Produits -->
+<section id="product">
+  <div class="container text-center">
+    <h2>Nos produits / Our Product</h2>
+    <p>Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
+    <p>Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
+  </div>
+</section>
+
+<!-- Export -->
+<section id="export" class="bg-light">
+  <div class="container text-center">
+    <h2>Export / Expédition</h2>
+    <p>MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
+    <p>Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
+  </div>
+</section>
+
+<!-- Galerie Images -->
+<section id="gallery">
+  <div class="container text-center">
+    <h2>Galerie</h2>
+    <div class="row image-grid">
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 1" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 2" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 3" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 4" class="img-fluid">
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="text-center py-3">
-  <p class="mb-0">&copy; 2025 Simador Agro Exports – Made with ♥ in Kaolack</p>
+<!-- Contact -->
+<section id="contact">
+  <div class="container text-center contact">
+    <h2>Contact</h2>
+    <p>Pour plus d'informations ou pour demander un échantillon :</p>
+    <p>For more information or to request a sample:</p>
+    <p>Email : <a href="mailto:daoudasy23@gmail.com">daoudasy23@gmail.com</a></p>
+    <p>WhatsApp : <a href="https://wa.me/221769559907" target="_blank">+221 76 955 99 07</a></p>
+  </div>
+</section>
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-float">
+  <a href="https://wa.me/221769559907?text=Bonjour%20Simador%2C%20je%20souhaite%20plus%20d'infos" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Simador Agro Exports – Made with ♥ in Kaolack</p>
 </footer>
 
-<!-- SCRIPTS -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  animatedElements.forEach(el => observer.observe(el));
+  // Change navbar background on scroll
+  window.addEventListener('scroll', function () {
+    const nav = document.querySelector('.navbar');
+    nav.classList.toggle('navbar-scrolled', window.scrollY > 50);
+  });
 </script>
 
 </body>
