@@ -12,7 +12,6 @@
       padding: 0;
     }
 
-    /* Navbar style */
     .navbar {
       transition: background-color 0.4s ease;
     }
@@ -68,6 +67,14 @@
       width: 50px;
     }
 
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
     .navbar-nav .nav-link {
       margin-right: 20px;
     }
@@ -88,6 +95,7 @@
         <li class="nav-item"><a class="nav-link active" href="#about">À propos</a></li>
         <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
         <li class="nav-item"><a class="nav-link" href="#export">Export</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Galerie</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -129,6 +137,27 @@
   </div>
 </section>
 
+<!-- Galerie Images -->
+<section id="gallery">
+  <div class="container text-center">
+    <h2>Galerie</h2>
+    <div class="row image-grid">
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 1" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 2" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 3" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap1.jpg" alt="Bissap 4" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Contact -->
 <section id="contact">
   <div class="container text-center contact">
@@ -143,10 +172,9 @@
 <!-- WhatsApp Floating Button -->
 <div class="whatsapp-float">
   <a href="https://wa.me/221769559907?text=Bonjour%20Simador%2C%20je%20souhaite%20plus%20d'infos" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" width="50">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
   </a>
 </div>
-  
 
 <!-- Footer -->
 <footer>
@@ -156,12 +184,12 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Scroll background change
+  // Change navbar background on scroll
   window.addEventListener('scroll', function () {
     const nav = document.querySelector('.navbar');
     nav.classList.toggle('navbar-scrolled', window.scrollY > 50);
   });
 </script>
+
 </body>
-  </html>
-  
+</html>
