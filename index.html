@@ -6,111 +6,51 @@
   <title>Simador Agro Exports</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
     }
 
     .navbar {
       background-color: #13344b;
-      transition: background-color 0.4s ease;
-    }
-
-    .navbar-scrolled {
-      background-color: #13344b !important;
     }
 
     .hero {
       background: url('Bissap1.jpg') center/cover no-repeat;
-      height: 100vh;
+      height: 90vh;
       color: white;
       display: flex;
       align-items: center;
       text-align: center;
       padding: 2rem;
-      animation: fadeInUp 2s ease-in-out;
     }
 
     .hero h1 {
-      font-size: 3.5rem;
-      animation: slideDown 1.5s ease-out;
-    }
-
-    .hero p {
-      animation: fadeIn 2.5s ease-in-out;
-    }
-
-    .hero .btn {
-      animation: zoomIn 2s ease-in-out;
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-50px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(50px); }
+      from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     section {
-      padding: 80px 0;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 1s ease;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card {
-      transform: scale(0.9);
-      opacity: 0;
-      transition: all 0.8s ease-in-out;
-    }
-
-    .card.visible {
-      transform: scale(1);
-      opacity: 1;
-    }
-
-    .image-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-
-    .image-grid img:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
+      padding: 60px 0;
     }
 
     footer {
       background: #13344b;
       color: #fff;
+      padding: 30px 0;
       text-align: center;
-      padding: 20px;
-      animation: fadeIn 2s;
+    }
+
+    .contact a {
+      text-decoration: none;
+      color: #ffc107;
     }
 
     .whatsapp-float {
@@ -122,16 +62,44 @@
 
     .whatsapp-float img {
       width: 50px;
-      animation: pulse 2s infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar-nav .nav-link {
+      margin-right: 20px;
+    }
+
+    .transparent-bg {
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+    }
+
+    .hero .btn {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-in-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bg-footer {
+      background-color: #13344b;
+      color: white;
     }
   </style>
 </head>
@@ -144,24 +112,33 @@
       <img src="Bissap1.jpg" alt="Logo" width="40" height="40" class="me-2">
       Simador Agro Exports
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#accueil">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#product">Produits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero" id="accueil">
+<section class="hero d-flex justify-content-center flex-column" id="accueil">
   <div class="container">
-    <div class="p-3 bg-dark bg-opacity-50 rounded">
+    <div class="transparent-bg p-3 rounded">
       <h1>Simador Agro Exports</h1>
       <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
       <a href="https://www.instagram.com/simadorbissap/" class="btn btn-warning mt-3">Nous suivre</a>
@@ -169,7 +146,7 @@
   </div>
 </section>
 
-<!-- Sections -->
+<!-- À propos -->
 <section id="about" class="bg-light">
   <div class="container text-center">
     <h2>À propos / About Us</h2>
@@ -178,85 +155,98 @@
   </div>
 </section>
 
+<!-- Produits -->
 <section id="product">
   <div class="container text-center">
     <h2>Nos produits / Our Product</h2>
-    <p>Trié à la main, séché naturellement, issu d'une agriculture durable à Kaolack.</p>
-    <p>Hand-sorted, naturally dried, perfect for tea blends, beverages, and cosmetics.</p>
+    <p>Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
+    <p>Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
   </div>
 </section>
 
-<section id="gallery" class="bg-light">
+<!-- Export -->
+<section id="export" class="bg-light">
+  <div class="container text-center">
+    <h2>Export / Expédition</h2>
+    <p>MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
+    <p>Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
+  </div>
+</section>
+
+<!-- Galerie -->
+<section id="gallery" class="bg-footer">
   <div class="container text-center">
     <h2>Galerie</h2>
     <div class="row image-grid">
-      <div class="col-md-3 col-6 mb-4"><img src="Bissap2.jpeg" alt=""></div>
-      <div class="col-md-3 col-6 mb-4"><img src="Bissap3.jpeg" alt=""></div>
-      <div class="col-md-3 col-6 mb-4"><img src="Bissap4.jpg" alt=""></div>
-      <div class="col-md-3 col-6 mb-4"><img src="Bissap5.jpg" alt=""></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container d-flex justify-content-center">
-    <div class="card p-4 shadow-lg animate-on-scroll" style="max-width: 600px; width: 100%;">
-      <div class="card-body text-center">
-        <h2>Contact</h2>
-        <p>Pour plus d'informations ou pour demander un échantillon :</p>
-        <p>Email : <a href="mailto:daoudasy23@gmail.com">daoudasy23@gmail.com</a></p>
-        <p>WhatsApp : <a href="https://wa.me/221769559907">+221 76 955 99 07</a></p>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap2.jpeg" alt="Bissap 1" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap3.jpeg" alt="Bissap 2" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap4.jpg" alt="Bissap 3" class="img-fluid">
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <img src="Bissap5.jpg" alt="Bissap 4" class="img-fluid">
       </div>
     </div>
   </div>
 </section>
 
-<!-- Social -->
-<section class="bg-light py-4">
-  <div class="container text-center">
-    <h4>Suivez-nous sur Instagram</h4>
-    <a href="https://www.instagram.com/simadorbissap/" class="fs-3 text-danger">
-      <i class="bi bi-instagram"></i>
-    </a>
+<!-- Contact -->
+<section id="contact" class="bg-footer">
+  <div class="container d-flex justify-content-center">
+    <div class="card shadow-lg p-4 animate-on-scroll" style="max-width: 600px; width: 100%;">
+      <div class="card-body text-center contact">
+        <h2 class="card-title text-white">Contact</h2>
+        <p class="card-text">Pour plus d'informations ou pour demander un échantillon :</p>
+        <p class="card-text">For more information or to request a sample:</p>
+        <p class="card-text">Email : <a href="mailto:daoudasy23@gmail.com">daoudasy23@gmail.com</a></p>
+        <p class="card-text">WhatsApp : <a href="https://wa.me/221769559907" target="_blank">+221 76 955 99 07</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- WhatsApp -->
+<!-- Réseaux sociaux -->
+<section class="bg-footer py-4">
+  <div class="container text-center">
+    <h4>Suivez-nous sur les réseaux sociaux</h4>
+    <div class="d-flex justify-content-center gap-4 mt-3">
+      <a href="https://www.instagram.com/simadorbissap/" target="_blank" class="fs-3" style="color: #E4405F;">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp Floating Button -->
 <div class="whatsapp-float">
-  <a href="https://wa.me/221769559907?text=Bonjour Simador, je veux plus d'infos">
+  <a href="https://wa.me/221769559907?text=Bonjour%20Simador%2C%20je%20souhaite%20plus%20d'infos" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
   </a>
 </div>
 
 <!-- Footer -->
 <footer>
-  <p>2025 &copy; Simador Agro Exports – Made with <i class="fas fa-heart" style="color:red"></i> in Kaolack</p>
+  <p class="text-white mb-0 py-3">&copy; 2025 Simador Agro Exports – Made with ♥ in Kaolack</p>
 </footer>
 
-<!-- JS Bootstrap + Scroll animation -->
+<!-- Bootstrap & animation JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  const sections = document.querySelectorAll("section");
-  const cards = document.querySelectorAll(".card");
-
-  const revealOnScroll = () => {
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        sec.classList.add("visible");
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
+  }, { threshold: 0.1 });
 
-    cards.forEach(card => {
-      const top = card.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        card.classList.add("visible");
-      }
-    });
-  };
-
-  window.addEventListener("scroll", revealOnScroll);
-  window.addEventListener("load", revealOnScroll);
+  animatedElements.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
