@@ -104,6 +104,20 @@
       background-color: #13344b;
       color: white;
     }
+
+    .rotate-title {
+  display: inline-block;
+  animation: rotateAnimation 3s infinite;
+}
+
+@keyframes rotateAnimation {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(
+0deg); }
+}
   </style>
 </head>
 <body>
@@ -143,7 +157,7 @@
 <!-- Sections suivantes (À propos, Produits, Galerie, etc.) restent identiques -->
 <!-- À propos -->
 <section id="about" class="bg-footer">
-  <div class="container text-center">
+  <div class="container text-center rotate-title">
     <h2>À propos / About Us</h2>
     <p>Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
     <p>We partner with local women farmers in Senegal to provide top-quality hibiscus.</p>
@@ -152,7 +166,7 @@
 
 <!-- Produits -->
 <section id="product">
-  <div class="container text-center">
+  <div class="container text-center rotate-title">
     <h2>Nos produits / Our Product</h2>
     <p>Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
     <p>Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
@@ -161,7 +175,7 @@
 
 <!-- Export -->
 <section id="export" class="bg-light">
-  <div class="container text-center">
+  <div class="container text-center rotate-title">
     <h2>Export / Expédition</h2>
     <p>MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
     <p>Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
