@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Simador Agro Exports - Hibiscus du Sénégal</title>
 
   <!-- Favicon -->
@@ -10,26 +10,34 @@
 
   <!-- Meta SEO -->
   <meta name="description" content="Simador Agro Exports - Exportateur de Bissap (hibiscus) de qualité du Sénégal vers le monde entier.">
-  <meta name="keywords" content="Hibiscus, Bissap, Sénégal, Exportation, Simador, Agro Exports, Agriculture, Bio">
+  <meta name="keywords" content="Hibiscus, Bissap, Sénégal, Exportation, Agriculture, Simador Agro Exports">
   <meta name="author" content="Simador Agro Exports">
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap + Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- AOS Animation -->
+  <!-- AOS (Animation on Scroll) -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
-    /* Ton CSS reste pratiquement le même avec quelques ajouts */
+    /* Corriger débordement */
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
+    
+    /* Navbar */
     .navbar {
       background-color: #13344b;
     }
+    .navbar-nav .nav-link {
+      margin-right: 20px;
+    }
+
+    /* Hero Section */
     .hero {
       background: url('Bissap11.png') center/cover no-repeat;
       height: 90vh;
@@ -53,60 +61,60 @@
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    .transparent-bg {
+      background: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .hero .btn {
+      background-color: #13344b;
+      color: white;
+    }
+    .hero .btn:hover {
+      background-color: #0f2a3a;
+    }
+
+    /* Sections */
     section {
       padding: 60px 0;
     }
-    footer {
-      background: #13344b;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
-      font-size: 14px;
+    .bg-footer {
+      background-color: #13344b;
+      color: white;
     }
-    .contact a {
-      text-decoration: none;
-      color: #ffc107;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-    }
-    .whatsapp-float img {
-      width: 50px;
-    }
+
+    /* Galerie Images */
     .image-grid img {
       width: 100%;
       height: auto;
       border-radius: 10px;
       object-fit: cover;
-      transition: transform 0.3s ease;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
     }
     .image-grid img:hover {
       transform: scale(1.05);
     }
-    .navbar-nav .nav-link {
-      margin-right: 20px;
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
     }
-    .transparent-bg {
-      background: rgba(0,0,0,0.5);
-      display: inline-block;
+    .whatsapp-float img {
+      width: 50px;
     }
-    .hero .btn,
-    .btn.bg-footer {
-      background-color: #13344b;
+
+    /* Footer */
+    footer {
+      background: #13344b;
       color: white;
-      transition: background-color 0.3s;
-    }
-    .hero .btn:hover,
-    .btn.bg-footer:hover {
-      background-color: #0f2a3a;
-    }
-    .bg-footer {
-      background-color: #13344b;
-      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -338,5 +346,4 @@
   
 
 </body>
-  </html>
-            
+</html>           
