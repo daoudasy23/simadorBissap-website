@@ -23,35 +23,28 @@
       background-color: #13344b;
     }
 
-    .hero {
-      position: relative;
-      height: 90vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-      color: white;
-    }
+  .hero {
+  background: url('Bissap5.jpg') center/cover no-repeat;
+  height: 90vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  animation: zoomInBackground 10s infinite; /* Animation ajoutée ici */
+}
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      
-      z-index: -1;
-    }
-
-    @keyframes slideBackground {
-      0% { background-image: url('Bissap1.jpg'); }
-      33% { background-image: url('Bissap5.jpg'); }
-    }
-
-
+@keyframes zoomInBackground {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Zoom avant */
+  }
+  100% {
+    transform: scale(1); /* Retour à la taille initiale */
+  }
+}
     .hero h1 {
       font-size: 3rem;
       animation: fadeIn 2s ease-in-out;
