@@ -1,319 +1,319 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simador Agro Exports</title>
-  
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simador Agro Exports</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <!-- AOS Animation -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-    .navbar {
-      background-color: #13344b;
-    }
+    .navbar {
+      background-color: #13344b;
+    }
 
-    .hero {
-      background: url('Bissap5.jpg') center/cover no-repeat;
-      height: 90vh;
-      color: white;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
+    .hero {
+      background: url('Bissap5.jpg') center/cover no-repeat;
+      height: 90vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
 
-    .hero h1 {
-      font-size: 3rem;
-      animation: fadeIn 2s ease-in-out;
-    }
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-    section {
-      padding: 60px 0;
-    }
+    section {
+      padding: 60px 0;
+    }
 
-    footer {
-      background: #13344b;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
-    }
+    footer {
+      background: #13344b;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
 
-    .contact a {
-      text-decoration: none;
-      color: #ffc107;
-    }
+    .contact a {
+      text-decoration: none;
+      color: #ffc107;
+    }
 
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+    }
 
-    .whatsapp-float img {
-      width: 50px;
-    }
+    .whatsapp-float img {
+      width: 50px;
+    }
 
-    .image-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-    .navbar-nav .nav-link {
-      margin-right: 20px;
-    }
+    .navbar-nav .nav-link {
+      margin-right: 20px;
+    }
 
-    .transparent-bg {
-      background: rgba(0,0,0,0.5);
-      display: inline-block;
-    }
+    .transparent-bg {
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+    }
 
-    .hero .btn,
-    .btn.bg-footer {
-      background-color: #13344b;
-      color: white;
-    }
+    .hero .btn,
+    .btn.bg-footer {
+      background-color: #13344b;
+      color: white;
+    }
 
-    .hero .btn:hover,
-    .btn.bg-footer:hover {
-      background-color: #0f2a3a;
-      color: #fff;
-    }
+    .hero .btn:hover,
+    .btn.bg-footer:hover {
+      background-color: #0f2a3a;
+      color: #fff;
+    }
 
-    .bg-footer {
-      background-color: #13344b;
-      color: white;
-    }
-  </style>
+    .bg-footer {
+      background-color: #13344b;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="Bissap1.jpg" alt="Logo" width="40" height="40" class="me-2">
-      Simador Agro Exports
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="Bissap1.jpg" alt="Logo" width="40" height="40" class="me-2">
+      Simador Agro Exports
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
 <!-- Hero Section -->
 <section class="hero d-flex justify-content-center flex-column" id="accueil">
-  <div class="container">
-    <div class="transparent-bg p-3 rounded">
-      <h1>Simador Agro Exports</h1>
-      <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
-      <a href="https://www.instagram.com/simadorbissap/" class="btn bg-footer mt-3">Nous suivre</a>
-    </div>
-  </div>
+  <div class="container">
+    <div class="transparent-bg p-3 rounded">
+      <h1>Simador Agro Exports</h1>
+      <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
+      <a href="https://www.instagram.com/simadorbissap/" class="btn bg-footer mt-3">Nous suivre</a>
+    </div>
+  </div>
 </section>
 
 <!-- À propos -->
 <section id="about" class="bg-footer">
-  <div class="container text-center">
-    <h2>À propos / About Us</h2>
-    <p>Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
-    <p>We partner with local women farmers in Senegal to provide top-quality hibiscus.</p>
-  </div>
+  <div class="container text-center">
+    <h2>À propos / About Us</h2>
+    <p>Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
+    <p>We partner with local women farmers in Senegal to provide top-quality hibiscus.</p>
+  </div>
 </section>
 
 <!-- Produits -->
 <section id="product">
-  <div class="container text-center">
-    <h2>Nos produits / Our Product</h2>
-    <p>Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
-    <p>Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
-  </div>
+  <div class="container text-center">
+    <h2>Nos produits / Our Product</h2>
+    <p>Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
+    <p>Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
+  </div>
 </section>
 
 <!-- Export -->
 <section id="export" class="bg-light">
-  <div class="container text-center">
-    <h2>Export / Expédition</h2>
-    <p>MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
-    <p>Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
-  </div>
+  <div class="container text-center">
+    <h2>Export / Expédition</h2>
+    <p>MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
+    <p>Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
+  </div>
 </section>
 
 <!-- Galerie -->
 <section id="gallery" class="bg-footer py-5">
-  <div class="container text-center">
-    <h2 class="mb-5 text-white">Galerie</h2>
-    <div class="row image-grid">
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <img src="Bissap2.jpeg" alt="Bissap 1" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <img src="Bissap3.jpeg" alt="Bissap 2" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <img src="Bissap4.jpg" alt="Bissap 3" class="img-fluid rounded shadow">
-      </div>
-      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-        <img src="Bissap5.jpg" alt="Bissap 4" class="img-fluid rounded shadow">
-      </div>
-    </div>
-  </div>
+  <div class="container text-center">
+    <h2 class="mb-5 text-white">Galerie</h2>
+    <div class="row image-grid">
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <img src="Bissap2.jpeg" alt="Bissap 1" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <img src="Bissap3.jpeg" alt="Bissap 2" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <img src="Bissap4.jpg" alt="Bissap 3" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <img src="Bissap5.jpg" alt="Bissap 4" class="img-fluid rounded shadow">
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Section Demande de devis -->
 <section id="devis" class="bg-footer py-5">
-  <div class="container">
-    <div class="card shadow-lg p-4">
-      <div class="card-body">
-        <h2 class="card-title text-center mb-4">Demander un devis</h2>
-        
-        <!-- Message de succès -->
-        <div id="devis-success" class="alert alert-success text-center d-none">
-          Merci, votre demande de devis a été envoyée !
-        </div>
-        
-        <!-- Formulaire -->
-        <form id="devis-form" action="https://formsubmit.co/ajax/daoudasy23@gmail.com" method="POST">
-          <!-- Champs cachés pour configuration -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="Nouvelle demande de devis">
-          <input type="hidden" name="_template" value="box">
+  <div class="container">
+    <div class="card shadow-lg p-4">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Demander un devis</h2>
+        
+        <!-- Message de succès -->
+        <div id="devis-success" class="alert alert-success text-center d-none">
+          Merci, votre demande de devis a été envoyée !
+        </div>
+        
+        <!-- Formulaire -->
+        <form id="devis-form" action="https://formsubmit.co/ajax/daoudasy23@gmail.com" method="POST">
+          <!-- Champs cachés pour configuration -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis">
+          <input type="hidden" name="_template" value="box">
 
-          <!-- Champs visibles -->
-          <div class="mb-3">
-            <label for="nom" class="form-label">Nom</label>
-            <input type="text" class="form-control" name="Nom" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="Email" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" name="Message" rows="5" required></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn bg-footer text-white">Envoyer</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+          <!-- Champs visibles -->
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" name="Nom" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" name="Message" rows="5" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn bg-footer text-white">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
-  
+  
 
 <!-- Contact -->
 <section id="contact">
-  <div class="container d-flex justify-content-center">
-    <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
-      <div class="card-body text-center contact">
-        <h2 class="card-title text-black">Contact</h2>
-        <p>Pour plus d'informations ou pour demander un échantillon :</p>
-        <p>Email : <a href="mailto:daoudasy23@gmail.com" style="color:#0d6efd">daoudasy23@gmail.com</a></p>
-        <p>WhatsApp : <a href="https://wa.me/221769559907" target="_blank" style="color:#000000">+221 76 955 99 07</a></p>
-      </div>
-    </div>
-  </div>
+  <div class="container d-flex justify-content-center">
+    <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
+      <div class="card-body text-center contact">
+        <h2 class="card-title text-black">Contact</h2>
+        <p>Pour plus d'informations ou pour demander un échantillon :</p>
+        <p>Email : <a href="mailto:daoudasy23@gmail.com" style="color:#0d6efd">daoudasy23@gmail.com</a></p>
+        <p>WhatsApp : <a href="https://wa.me/221769559907" target="_blank" style="color:#000000">+221 76 955 99 07</a></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Réseaux sociaux -->
 <section class="py-4">
-  <div class="container text-center">
-    <h4>Suivez-nous sur les réseaux sociaux</h4>
-    <div class="d-flex justify-content-center gap-4 mt-3">
-      <a href="https://www.instagram.com/simadorbissap/" target="_blank" class="fs-3" style="color: #E4405F;">
-        <i class="bi bi-instagram"></i>
-      </a>
-    </div>
-  </div>
+  <div class="container text-center">
+    <h4>Suivez-nous sur les réseaux sociaux</h4>
+    <div class="d-flex justify-content-center gap-4 mt-3">
+      <a href="https://www.instagram.com/simadorbissap/" target="_blank" class="fs-3" style="color: #E4405F;">
+        <i class="bi bi-instagram"></i>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- WhatsApp Floating Button -->
 <div class="whatsapp-float">
-  <a href="https://wa.me/221769559907?text=Bonjour%20Simador%2C%20je%20souhaite%20plus%20d'infos" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
-  </a>
+  <a href="https://wa.me/221769559907?text=Bonjour%20Simador%2C%20je%20souhaite%20plus%20d'infos" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+  </a>
 </div>
 
 <!-- Footer -->
 <footer>
-  <p class="text-white mb-0 py-3">2025 &copy; Simador Agro Exports – Made with <i class="bi bi-heart-fill" style="color:red"></i> in Kaolack</p>
+  <p class="text-white mb-0 py-3">2025 &copy; Simador Agro Exports – Made with <i class="bi bi-heart-fill" style="color:red"></i> in Kaolack</p>
 </footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init();
 </script>
 
 <!-- Script pour gestion de l'envoi -->
 <script>
-  const form = document.getElementById('devis-form');
-  const successMessage = document.getElementById('devis-success');
+  const form = document.getElementById('devis-form');
+  const successMessage = document.getElementById('devis-success');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    const formData = new FormData(form);
+    const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        form.reset();
-        form.style.display = 'none';
-        successMessage.classList.remove('d-none');
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        form.style.display = 'none';
+        successMessage.classList.remove('d-none');
 
-        // Disparition automatique après 25 secondes
-        setTimeout(() => 
+        // Disparition automatique après 25 secondes
+        setTimeout(() => 
 {
-          successMessage.classList.add('d-none');
-        }, 25000);
-      } else {
-        alert("Une erreur est survenue. Veuillez réessayer.");
-      }
-    })
-    .catch(error => {
-      alert("Erreur réseau. Vérifiez votre connexion.");
-    });
-  });
+          successMessage.classList.add('d-none');
+        }, 25000);
+      } else {
+        alert("Une erreur est survenue. Veuillez réessayer.");
+      }
+    })
+    .catch(error => {
+      alert("Erreur réseau. Vérifiez votre connexion.");
+    });
+  });
 </script>
-  
+  
 
 </body>
-  </html>
-            
+  </html>
+            
