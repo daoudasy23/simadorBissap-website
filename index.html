@@ -106,6 +106,25 @@
       color: white;
     }
 
+
+
+    @keyframes rotateIn {
+  0% {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.text-rotation {
+  animation: rotateIn 2s ease-out
+ forwards;
+}
+    
+            
   </style>
 </head>
 <body>
@@ -137,7 +156,7 @@
     <div class="transparent-bg p-4 rounded">
       <h1>Simador Agro Exports</h1>
       <p class="lead" data-aos="fade-up">Hibiscus de qualité supérieure – Made in Kaolack</p>
-      <a href="#devis" class="btn bg-footer mt-3" data-aos="fade-up">Demander un devis</a>
+      <a href="#devis" class="btn bg-footer text-rotation mt-3">Demander un devis</a>
     </div>
   </div>
 </section>
@@ -147,7 +166,7 @@
 <section id="about" class="bg-footer" data-aos="fade-up">
   <div class="container text-center">
     <h2>À propos / About Us</h2>
-    <p data-aos="fade-up" data-aos-delay="100">Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
+    <p class="text-rotation">Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
     <p data-aos="fade-up" data-aos-delay="100">We partner with local women farmers in Senegal to provide top-quality hibiscus.</p>
   </div>
 </section>
@@ -156,7 +175,7 @@
 <section id="product" class="rotate-text" data-aos="fade-up">
   <div class="container text-center">
     <h2>Nos produits / Our Product</h2>
-    <p data-aos="fade-up" data-aos-delay="100">Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
+    <p class="text-rotation">Trié à la main et séché naturellement<br>Issu d'une agriculture durable à Kaolack<br>Parfait pour infusions, boissons, cosmétiques</p>
     <p data-aos="fade-up" data-aos-delay="100">Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.</p>
   </div>
 </section>
@@ -165,7 +184,7 @@
 <section id="export" class="bg-light rotate-text" data-aos="fade-up">
   <div class="container text-center">
     <h2>Export / Expédition</h2>
-    <p data-aos="fade-up" data-aos-delay="100">MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
+    <p class="text-rotation">MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
     <p data-aos="fade-up" data-aos-delay="100">Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
   </div>
 </section>
@@ -174,7 +193,7 @@
 <section id="gallery" class="bg-footer py-5">
   <div class="container text-center">
     <h2 class="mb-5 text-white">Galerie</h2>
-    <div class="card-body col-md-12 col-12 mb-4" data-aos="fade-up" data-aos-delay="100" >
+    <div class="card-body col-md-12 col-12 mb-4" data-aos="fade-up" data-aos-delay="100">
        <img src="Bissap12.png" alt="Bissap 1" class="img-fluid rounded shadow"> 
     </div>
     
