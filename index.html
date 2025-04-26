@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simador Agro Exports</title>
-
+  
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
   <!-- AOS Animation -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -21,46 +22,43 @@
     .navbar {
       background-color: #13344b;
     }
+    .hero {
+  background: url('Bissap5.jpg') center/cover no-repeat;
+  height: 90vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  animation: zoomInBackground 10s infinite; /* Animation ajoutée ici */
+}
 
-    .carousel-item {
+@keyframes zoomInBackground {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Zoom avant */
+  }
+  100% {
+    transform: scale(1); /* Retour à la taille initiale */
+  }
+}
+    
+
+    .hero {
+      background: url('Bissap5.jpg') center/cover no-repeat;
       height: 90vh;
-      background-size: cover;
-      background-position: center;
-      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
     }
 
-    .carousel-item::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      z-index: 1;
-    }
-
-    .carousel-caption {
-      z-index: 2;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .carousel-caption h1 {
+    .hero h1 {
       font-size: 3rem;
       animation: fadeIn 2s ease-in-out;
-    }
-
-    .carousel-zoom img {
-      transform: scale(1);
-      animation: zoomVideo 20s infinite ease-in-out;
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
-
-    @keyframes zoomVideo {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
     }
 
     @keyframes fadeIn {
@@ -70,16 +68,6 @@
 
     section {
       padding: 60px 0;
-    }
-
-    /* Suppression de l'espace entre le carrousel et la section "À propos" */
-    #accueil {
-      margin: 0 !important ;
-    }
-
-    #about {
-      padding-top: 0;
-      margin-top: -30px; /* Ajuster si nécessaire pour combler l'espace */
     }
 
     footer {
@@ -117,6 +105,11 @@
       margin-right: 20px;
     }
 
+    .transparent-bg {
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+    }
+
     .hero .btn,
     .btn.bg-footer {
       background-color: #13344b;
@@ -147,7 +140,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
@@ -159,37 +152,19 @@
   </div>
 </nav>
 
-<!-- Hero Section avec Slider -->
-<div id="accueil">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active carousel-zoom">
-        <img src="Bissap5.jpg" alt="Slide 1" class="d-block w-100">
-        <div class="carousel-caption text-white">
-          <h1>Simador Agro Exports</h1>
-          <p>Hibiscus de qualité supérieure – Made in Kaolack</p>
-          <a href="https://www.instagram.com/simadorbissap/" class="btn bg-footer mt-3">Nous suivre</a>
-        </div>
-      </div>
-      <div class="carousel-item carousel-zoom">
-        <img src="Bissap4.jpg" alt="Slide 2" class="d-block w-100">
-        <div class="carousel-caption text-white">
-          <h1>Exportation fiable</h1>
-          <p>Livraison rapide – Qualité garantie</p>
-        </div>
-      </div>
+<!-- Hero Section -->
+<section class="hero d-flex justify-content-center flex-column" id="accueil">
+  <div class="container">
+    <div class="transparent-bg p-3 rounded">
+      <h1>Simador Agro Exports</h1>
+      <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
+      <a href="https://www.instagram.com/simadorbissap/" class="btn bg-footer mt-3">Nous suivre</a>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
   </div>
-</div>
+</section>
 
 <!-- À propos -->
-<section id="about" class="bg-footer m-3">
+<section id="about" class="bg-footer">
   <div class="container text-center">
     <h2>À propos / About Us</h2>
     <p>Simador Agro Exports travaille avec des femmes productrices locales au Sénégal pour fournir un hibiscus de qualité supérieure.</p>
@@ -236,19 +211,26 @@
   </div>
 </section>
 
-<!-- Devis Section -->
+<!-- Section Demande de devis -->
 <section id="devis" class="bg-footer py-5">
   <div class="container">
     <div class="card shadow-lg p-4">
       <div class="card-body">
         <h2 class="card-title text-center mb-4">Demander un devis</h2>
+        
+        <!-- Message de succès -->
         <div id="devis-success" class="alert alert-success text-center d-none">
           Merci, votre demande de devis a été envoyée !
         </div>
+        
+        <!-- Formulaire -->
         <form id="devis-form" action="https://formsubmit.co/ajax/daoudasy23@gmail.com" method="POST">
+          <!-- Champs cachés pour configuration -->
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="Nouvelle demande de devis">
           <input type="hidden" name="_template" value="box">
+
+          <!-- Champs visibles -->
           <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
             <input type="text" class="form-control" name="Nom" required>
@@ -269,6 +251,7 @@
     </div>
   </div>
 </section>
+  
 
 <!-- Contact -->
 <section id="contact">
@@ -315,25 +298,44 @@
   AOS.init();
 </script>
 
+<!-- Script pour gestion de l'envoi -->
 <script>
   const form = document.getElementById('devis-form');
   const successMessage = document.getElementById('devis-success');
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+
     const formData = new FormData(form);
+
     fetch(form.action, {
       method: "POST",
       body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
     })
-    .then(response => response.json())
-    .then(data => {
-      successMessage.classList.remove("d-none");
-      form.reset();
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        form.style.display = 'none';
+        successMessage.classList.remove('d-none');
+
+        // Disparition automatique après 45 secondes
+        setTimeout(() => 
+{
+          successMessage.classList.add('d-none');
+        }, 45000);
+      } else {
+        alert("Une erreur est survenue. Veuillez réessayer.");
+      }
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      alert("Erreur réseau. Vérifiez votre connexion.");
+    });
   });
 </script>
+  
+
 </body>
 </html>
-      
