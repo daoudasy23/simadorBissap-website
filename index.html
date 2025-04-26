@@ -130,13 +130,55 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero" id="accueil">
-  <div class="container">
-    <div class="transparent-bg p-4 rounded">
-      <h1>Simador Agro Exports</h1>
-      <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
-      <a href="#devis" class="btn bg-footer mt-3">Demander un devis</a>
+
+<!-- Hero Section avec Carousel -->
+<section id="accueil">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner" style="height: 90vh;">
+      
+      <div class="carousel-item active">
+        <img src="Bissap11.png" class="d-block w-100" style="object-fit: cover; height: 90vh;" alt="Hibiscus 1">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+          <div class="transparent-bg p-4 rounded">
+            <h1>Simador Agro Exports</h1>
+            <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
+            <a href="#devis" class="btn bg-footer mt-3">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="Bissap3.jpeg" class="d-block w-100" style="object-fit: cover; height: 90vh;" alt="Hibiscus 2">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+          <div class="transparent-bg p-4 rounded">
+            <h1>Simador Agro Exports</h1>
+            <p class="lead">Production durable & qualité premium</p>
+            <a href="#devis" class="btn bg-footer mt-3">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="Bissap4.jpg" class="d-block w-100" style="object-fit: cover; height: 90vh;" alt="Hibiscus 3">
+        <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+          <div class="transparent-bg p-4 rounded">
+            <h1>Simador Agro Exports</h1>
+            <p class="lead">Partenaire de confiance pour l'export</p>
+            <a href="#devis" class="btn bg-footer mt-3">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Boutons de contrôle -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+
   </div>
 </section>
 
