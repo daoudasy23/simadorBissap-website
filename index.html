@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simador Agro Exports</title>
+  <title>Simador Agro Exports - Hibiscus du Sénégal</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Simador Agro Exports - Exportateur de Bissap (hibiscus) de qualité du Sénégal vers le monde entier.">
+  <meta name="keywords" content="Hibiscus, Bissap, Sénégal, Exportation, Simador, Agro Exports, Agriculture, Bio">
+  <meta name="author" content="Simador Agro Exports">
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,18 +21,15 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
+    /* Ton CSS reste pratiquement le même avec quelques ajouts */
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
     }
-
     .navbar {
       background-color: #13344b;
-      transition: background-color 0.5s;
     }
-
     .hero {
       background: url('Bissap11.png') center/cover no-repeat;
       height: 90vh;
@@ -33,120 +38,75 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
-      animation: zoomInBackground 10s infinite alternate;
+      animation: zoomInBackground 10s infinite;
     }
-
     @keyframes zoomInBackground {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
-
     .hero h1 {
-      font-size: 3rem;
-      animation: fadeInDown 2s ease-in-out;
+      font-size: 3.5rem;
+      animation: fadeIn 2s ease-in-out;
     }
-
-    .hero p {
-      animation: fadeInUp 2s ease-in-out;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
     section {
       padding: 60px 0;
     }
-
     footer {
       background: #13344b;
       color: #fff;
       padding: 30px 0;
       text-align: center;
+      font-size: 14px;
     }
-
     .contact a {
       text-decoration: none;
       color: #ffc107;
     }
-
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 1000;
+      z-index: 100;
     }
-
     .whatsapp-float img {
       width: 50px;
-      animation: pulse 2s infinite;
     }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
     .image-grid img {
       width: 100%;
-      height: 250px;
+      height: auto;
       border-radius: 10px;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
     .image-grid img:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
-
     .navbar-nav .nav-link {
       margin-right: 20px;
-      transition: color 0.3s;
     }
-
-    .navbar-nav .nav-link:hover {
-      color: #ffc107;
-    }
-
     .transparent-bg {
       background: rgba(0,0,0,0.5);
       display: inline-block;
     }
-
     .hero .btn,
     .btn.bg-footer {
       background-color: #13344b;
       color: white;
       transition: background-color 0.3s;
     }
-
     .hero .btn:hover,
     .btn.bg-footer:hover {
       background-color: #0f2a3a;
-      color: #fff;
     }
-
     .bg-footer {
       background-color: #13344b;
       color: white;
-    }
-
-    .card {
-      border: none;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
     }
   </style>
 </head>
@@ -162,7 +122,6 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
@@ -175,16 +134,17 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero d-flex justify-content-center flex-column" id="accueil">
+<section class="hero" id="accueil">
   <div class="container">
-    <div class="transparent-bg p-3 rounded">
+    <div class="transparent-bg p-4 rounded">
       <h1>Simador Agro Exports</h1>
       <p class="lead">Hibiscus de qualité supérieure – Made in Kaolack</p>
-      <a href="https://www.instagram.com/simadorbissap/" class="btn bg-footer mt-3">Nous suivre</a>
+      <a href="#devis" class="btn bg-footer mt-3">Demander un devis</a>
     </div>
   </div>
 </section>
 
+<!-- Sections suivantes (À propos, Produits, Galerie, etc.) restent identiques -->
 <!-- À propos -->
 <section id="about" class="bg-footer">
   <div class="container text-center">
