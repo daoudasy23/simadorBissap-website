@@ -199,10 +199,12 @@
     <div class="card shadow-lg p-4">
       <div class="card-body">
         <h2 class="card-title text-center mb-4">Demander un devis</h2>
-        <form action="https://formsubmit.co/daoudasy23@gmail.com" method="POST">
+
+        <form id="formDevis" action="https://formsubmit.co/daoudasy23@gmail.com" method="POST">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="Nouvelle demande de devis">
-          
+          <input type="hidden" name="_template" value="box">
+
           <div class="mb-3">
             <label for="nom" class="form-label">Nom</label>
             <input type="text" class="form-control" id="nom" name="Nom" required>
@@ -219,6 +221,10 @@
             <button type="submit" class="btn bg-footer">Envoyer</button>
           </div>
         </form>
+
+        <div id="confirmationMessage" class="text-center mt-3 text-success fw-bold" style="display: none;">
+          Merci ! Ta demande de devis est envoyée.
+        </div>
       </div>
     </div>
   </div>
@@ -279,13 +285,32 @@
 
   animatedElements.forEach(el => observer.observe(el));
 </script>
-<!-- Google tag (gtag.js) demander un devis-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
+    const form = document.getElementById('formDevis');
+  const confirmation = document.getElementById('confirmationMessage');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // Empêche le rechargement
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        confirmation.style.display = "block";
+        form.reset();
+      } else {
+        confirmation.innerText = "Une erreur est survenue. Réessaie.";
+        confirmation.classList.remove('text-success');
+        confirmation.classList.add('text-danger');
+        confirmation.style.display = "block";
+      }
+    });
+  });
 </script>
   
 </body>
