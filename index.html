@@ -4,8 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simador Agro Exports</title>
+  
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   
   <style>
     body {
@@ -82,20 +87,16 @@
       display: inline-block;
     }
 
-    .hero .btn {
-      margin-top: 15px;
-      font-weight: bold;
+    .hero .btn,
+    .btn.bg-footer {
+      background-color: #13344b;
+      color: white;
     }
 
-    .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease-in-out;
-    }
-
-    .animate-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .hero .btn:hover,
+    .btn.bg-footer:hover {
+      background-color: #0f2a3a;
+      color: #fff;
     }
 
     .bg-footer {
@@ -103,8 +104,6 @@
       color: white;
     }
   </style>
-
-  
 </head>
 <body>
 
@@ -115,24 +114,16 @@
       <img src="Bissap1.jpg" alt="Logo" width="40" height="40" class="me-2">
       Simador Agro Exports
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#accueil">Accueil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">À propos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#product">Produits</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -177,85 +168,66 @@
 </section>
 
 <!-- Galerie -->
-
-<!-- Galerie -->
 <section id="gallery" class="bg-footer py-5">
   <div class="container text-center">
     <h2 class="mb-5 text-white">Galerie</h2>
     <div class="row image-grid">
       <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="photo-container">
-          <img src="Bissap2.jpeg" alt="Bissap 1" class="img-fluid rounded shadow">
-        </div>
+        <img src="Bissap2.jpeg" alt="Bissap 1" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="photo-container">
-          <img src="Bissap3.jpeg" alt="Bissap 2" class="img-fluid rounded shadow">
-        </div>
+        <img src="Bissap3.jpeg" alt="Bissap 2" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="photo-container">
-          <img src="Bissap4.jpg" alt="Bissap 3" class="img-fluid rounded shadow">
-        </div>
+        <img src="Bissap4.jpg" alt="Bissap 3" class="img-fluid rounded shadow">
       </div>
       <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="photo-container">
-          <img src="Bissap5.jpg" alt="Bissap 4" class="img-fluid rounded shadow">
-        </div>
+        <img src="Bissap5.jpg" alt="Bissap 4" class="img-fluid rounded shadow">
       </div>
     </div>
   </div>
 </section>
 
-  
-<!-- Demande -->
+<!-- Demande de devis -->
 <section id="devis" class="bg-footer py-5">
-  <div class="container">
-    <div class="card shadow-lg p-4">
-      <div class="card-body">
-        <h2 class="card-title text-center mb-4">Demander un devis</h2>
-
-        <form id="formDevis" action="https://formsubmit.co/daoudasy23@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="Nouvelle demande de devis">
-          <input type="hidden" name="_template" value="box">
-
-          <div class="mb-3">
-            <label for="nom" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="nom" name="Nom" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="Email" required>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn bg-footer">Envoyer</button>
-          </div>
-        </form>
-
-        <div id="confirmationMessage" class="text-center mt-3 text-success fw-bold" style="display: none;">
-          Merci ! Ta demande de devis est envoyée.
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="container">
+    <div class="card shadow-lg p-4">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">Demander un devis</h2>
+        <form action="https://formsubmit.co/daoudasy23@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis">
+          <input type="hidden" name="_template" value="box">
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" name="Nom" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" name="Message" rows="5" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn bg-footer">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
-  
 
 <!-- Contact -->
 <section id="contact">
   <div class="container d-flex justify-content-center">
-    <div class="card shadow-lg p-4 animate-on-scroll" style="max-width: 600px; width: 100%;">
+    <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
       <div class="card-body text-center contact">
         <h2 class="card-title text-black">Contact</h2>
-        <p class="card-text">Pour plus d'informations ou pour demander un échantillon :</p>
-        <p class="card-text">For more information or to request a sample:</p>
-        <p class="card-text">Email : <a href="mailto:daoudasy23@gmail.com" style="color:#0d6efd">daoudasy23@gmail.com</a></p>
-        <p class="card-text">WhatsApp : <a href="https://wa.me/221769559907" target="_blank" style="color:#000000">+221 76 955 99 07</a></p>
+        <p>Pour plus d'informations ou pour demander un échantillon :</p>
+        <p>Email : <a href="mailto:daoudasy23@gmail.com" style="color:#0d6efd">daoudasy23@gmail.com</a></p>
+        <p>WhatsApp : <a href="https://wa.me/221769559907" target="_blank" style="color:#000000">+221 76 955 99 07</a></p>
       </div>
     </div>
   </div>
@@ -282,52 +254,16 @@
 
 <!-- Footer -->
 <footer>
-  <p class="text-white mb-0 py-3">2025 &copy; Simador Agro Exports – Made with <i class="bi bi-heart-fill" style="color:red"></i> in Kaolack </p>
+  <p class="text-white mb-0 py-3">2025 &copy; Simador Agro Exports – Made with <i class="bi bi-heart-fill" style="color:red"></i> in Kaolack</p>
 </footer>
 
-<!-- Bootstrap & animation JS -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  animatedElements.forEach(el => observer.observe(el));
-</script>
-  
-<script>
-    const form = document.getElementById('formDevis');
-  const confirmation = document.getElementById('confirmationMessage');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Empêche le rechargement
-
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        confirmation.style.display = "block";
-        form.reset();
-      } else {
-        confirmation.innerText = "Une erreur est survenue. Réessaie.";
-        confirmation.classList.remove('text-success');
-        confirmation.classList.add('text-danger');
-        confirmation.style.display = "block";
-      }
-    });
-  });
+  AOS.init();
 </script>
 
-  
 </body>
-</html>
+  </html>
+            
