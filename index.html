@@ -6,9 +6,16 @@
   <title>Simador Agro Exports</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <!-- Dans le <head> -->
- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   
+<!-- Dans <head> -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Avant </body> -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</
+script>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -106,16 +113,21 @@
     }
   </style>
   <style>
-  .photo-container img {
-    transition: transform 0.5s ease, filter 0.5s ease;
-  }
+  .photo-container img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
 
-  .photo-container img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
-  }
+  .photo-container img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
 
-</style>
+  .bg-footer {
+    background-color: #0d6efd; /* bleu Bootstrap par défaut */
+    color: white;
+
+  }
+  </style>
   
 </head>
 <body>
@@ -190,33 +202,33 @@
 
 <!-- Galerie -->
 
-<section id="galerie" class="py-5 bg-footer">
-  <div class="container">
-    <h2 class="text-center mb-4">Galerie</h2>
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="photo-container">
-          <img src="Bissap1.jpg" class="img-fluid rounded shadow" alt="Photo 1">
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="photo-container">
-          <img src="Bissap2.jpeg" class="img-fluid rounded shadow" alt="Photo 2">
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="photo-container">
-          <img src="Bissap3.jpeg" class="img-fluid rounded shadow" alt="Photo 3">
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="photo-container">
-          <img src="Bissap4.jpg" class="img-fluid rounded shadow" alt="Photo 3">
-        </div>
+<!-- Galerie -->
+<section id="gallery" class="bg-footer py-5">
+  <div class="container text-center">
+    <h2 class="mb-5 text-white">Galerie</h2>
+    <div class="row image-grid">
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="photo-container">
+          <img src="Bissap2.jpeg" alt="Bissap 1" class="img-fluid rounded shadow">
+        </div>
       </div>
-    </div>
-
-  </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="photo-container">
+          <img src="Bissap3.jpeg" alt="Bissap 2" class="img-fluid rounded shadow">
+        </div>
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="photo-container">
+          <img src="Bissap4.jpg" alt="Bissap 3" class="img-fluid rounded shadow">
+        </div>
+      </div>
+      <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="photo-container">
+          <img src="Bissap5.jpg" alt="Bissap 4" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
   
@@ -340,12 +352,6 @@
   });
 </script>
 
-<!-- Juste avant </body> -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</
-script>
   
 </body>
 </html>
