@@ -378,16 +378,20 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS Animation JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 2000,
-    once: true
+    duration: 3000, // durée générale des animations en ms
+    easing: 'ease-in-out', // effet de transition
+    once: true, // animation une seule fois (ne se répète pas au scroll)
+    mirror: false // pas d'effet inversé quand on remonte
   });
 </script>
+
   
-  
-<!-- Script pour gestion de l'envoi -->
+<!-- Script pour gestion de l'envoi de la demande-->
 <script>
   const form = document.getElementById('devis-form');
   const successMessage = document.getElementById('devis-success');
