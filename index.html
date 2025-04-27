@@ -159,6 +159,9 @@
         <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
         <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item">
+           <button id="toggle-lang" class="btn btn-warning ms-3">Fr/En</button>
+        </li>
       </ul>
     </div>
   </div>
@@ -222,13 +225,13 @@
     <div class="col-12 col-md-6 d-flex align-items-center">
       <div class="card-body">
         <h5 class="card-title">Nos produits / Our Product</h5>
-        <p class="card-text" data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" data-aos-easing="ease-out-cubic"  >
+        <p class="card-text fr" data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" data-aos-easing="ease-out-cubic"  >
           Trié à la main et séché naturellement<br>
           Issu d'une agriculture durable à Kaolack<br>
           Parfait pour infusions, boissons, cosmétiques
         </p>
         <p class="card-text" data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" data-aos-easing="ease-out-cubic" >
-          <small class="text-muted">
+          <small class="text-muted en">
             Our hibiscus is hand-sorted, naturally dried, and perfect for tea blends, beverages, and cosmetics.
           </small>
         </p>
@@ -244,15 +247,15 @@
 <section id="export" class="bg-light rotate-text" data-aos="fade-up">
   <div class="container text-center">
     <h2>Export / Expédition</h2>
-    <p data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" data-aos-easing="ease-out-cubic">MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
-    <p data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" data-aos-easing="ease-out-cubic">Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
+    <p class="fr" data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" data-aos-easing="ease-out-cubic">MOQ flexible – Livraison en Europe & au-delà. Contactez-nous pour un devis personnalisé.</p>
+    <p class="en" data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000" data-aos-easing="ease-out-cubic">Flexible MOQ – We ship across Europe and beyond. Get in touch for a custom quote.</p>
   </div>
 </section>
 
 <!-- Galerie -->
 <section id="gallery" class="bg-footer py-5">
   <div class="container text-center">
-    <h2 class="mb-5 text-white">Galerie</h2>
+    <h2 class="mb-5 text-white fr">Galerie</h2>
     <div class="card-body col-md-12 col-12 mb-4" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
        <img src="Bissap12.png" alt="Bissap 1" class="img-fluid rounded shadow"> 
     </div>
@@ -293,7 +296,7 @@
   <div class="container">
     <div class="card shadow-lg p-4">
       <div class="card-body">
-        <h2 class="card-title text-center mb-4">Demander un devis</h2>
+        <h2 class="card-title text-center mb-4 fr">Demander un devis</h2>
         
         <!-- Message de succès -->
         <div id="devis-success" class="alert alert-success text-center d-none">
@@ -309,19 +312,19 @@
 
           <!-- Champs visibles -->
           <div class="mb-3">
-            <label for="nom" class="form-label">Nom</label>
+            <label for="nom" class="form-label fr">Nom</label>
             <input type="text" class="form-control" name="Nom" required>
           </div>
           <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label fr">Email</label>
             <input type="email" class="form-control" name="Email" required>
           </div>
           <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
+            <label for="message" class="form-label fr">Message</label>
             <textarea class="form-control" name="Message" rows="5" required></textarea>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn bg-footer text-white">Envoyer</button>
+            <button type="submit" class="btn bg-footer text-white fr">Envoyer</button>
           </div>
         </form>
       </div>
@@ -338,8 +341,8 @@
       <div class="card-body">
 
         <div class="card-body text-center contact">
-        <h2 class="card-title text-black">Contact</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Pour plus d'informations ou pour demander un échantillon :</p>
+        <h2 class="card-title text-black fr">Contact</h2>
+        <p data-aos="fade-up" data-aos-delay="100" class="fr">Pour plus d'informations ou pour demander un échantillon :</p>
 
           <div class="d-flex align-items-center mb-3">
              <i class="bi bi-phone me-2 text-icone"></i>
@@ -352,7 +355,7 @@
           </div>
       </div>
       <div class="container text-center">
-        <h4 data-aos="fade-up" data-aos-delay="100">Suivez-nous sur les réseaux sociaux</h4>
+        <h4 data-aos="fade-up" data-aos-delay="100" class="fr">Suivez-nous sur les réseaux sociaux</h4>
         <div class="d-flex justify-content-center gap-4 mt-3">
         <a href="https://www.instagram.com/simadorbissap/" target="_blank" class="fs-3" style="color: #E4405F;">
         <i class="bi bi-instagram"></i>
@@ -375,7 +378,7 @@
 
 <!-- Footer -->
 <footer>
-  <p class="text-white mb-0 py-3">2025 &copy; Simador Agro Exports. Tous droits réservés. </br>  Made with <i class="bi bi-heart-fill" style="color:red"></i> in Kaolack</p>
+  <p class="text-white mb-0 py-3 fr">2025 &copy; Simador Agro Exports. Tous droits réservés. </br>  Réalisé avec <i class="bi bi-heart-fill" style="color:red"></i> à Kaolack, Sénégal</p>
 </footer>
 
 <!-- Scripts -->
@@ -438,6 +441,31 @@
   });
 </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButton = document.getElementById('toggle-lang');
+  const frenchTexts = document.querySelectorAll('.fr');
+  const englishTexts = document.querySelectorAll('.en');
+
+  // Au début, cacher les textes anglais
+  englishTexts.forEach(e => e.style.display = 'none');
+
+  toggleButton.addEventListener('click', function() {
+    if (toggleButton.innerText === 'EN') {
+      frenchTexts.forEach(e => e.style.display = 'none');
+      englishTexts.forEach(e => e.style.display = 'block');
+      toggleButton.innerText = 'FR';
+    } else {
+      frenchTexts.forEach(e => e.style.display = 'block');
+      englishTexts.forEach(e => e.style.display = 'none');
+      toggleButton.innerText = 'EN';
+    }
+
+  });
+});
+</script>
+  
 </body>
 </html>
             
