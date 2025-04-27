@@ -159,9 +159,7 @@
         <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
         <li class="nav-item"><a class="nav-link" href="#product">Produits</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item">
-           <button id="toggle-lang" class="btn btn-warning ms-3">Fr/En</button>
-        </li>
+        
       </ul>
     </div>
   </div>
@@ -378,7 +376,11 @@
 
 <!-- Footer -->
 <footer>
-  <p class="text-white mb-0 py-3 fr">2025 &copy; Simador Agro Exports. Tous droits réservés. </br>  Réalisé avec <i class="bi bi-heart-fill" style="color:red"></i> à Kaolack, Sénégal</p>
+  <div class="text-center mt-3">
+  <button onclick="changeLanguage('fr')" class="btn btn-primary">Français</button>
+  <button onclick="changeLanguage('en')" class="btn btn-secondary">English</button>
+  </div>
+  <p class="text-white mb-0 py-3 lang-fr">2025 &copy; Simador Agro Exports. Tous droits réservés. </br>  Réalisé avec <i class="bi bi-heart-fill" style="color:red"></i> à Kaolack, Sénégal</p>
 </footer>
 
 <!-- Scripts -->
@@ -442,28 +444,21 @@
 </script>
 
 
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const toggleButton = document.getElementById('toggle-lang');
-  const frenchTexts = document.querySelectorAll('.fr');
-  const englishTexts = document.querySelectorAll('.en');
+function changeLanguage(lang) {
+  var frElements = document.querySelectorAll('.lang-fr');
+  var enElements = document.querySelectorAll('.lang-en');
+  
+  if (lang === 'fr') {
+    frElements.forEach(el => el.style.display = 'block');
+    enElements.forEach(el => el.style.display = 'none');
+  } else {
+    frElements.forEach(el => el.style.display = 'none');
+    enElements.forEach(el => el.style.display = 'block');
+  }
 
-  // Au début, cacher les textes anglais
-  englishTexts.forEach(e => e.style.display = 'none');
-
-  toggleButton.addEventListener('click', function() {
-    if (toggleButton.innerText === 'EN') {
-      frenchTexts.forEach(e => e.style.display = 'none');
-      englishTexts.forEach(e => e.style.display = 'block');
-      toggleButton.innerText = 'FR';
-    } else {
-      frenchTexts.forEach(e => e.style.display = 'block');
-      englishTexts.forEach(e => e.style.display = 'none');
-      toggleButton.innerText = 'EN';
-    }
-
-  });
-});
+}
 </script>
   
 </body>
