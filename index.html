@@ -112,49 +112,31 @@
             
   </style>
 
+<!-- Loader Cercle Pro -->
 <style>
-.loader-animation {
-  display: flex;
-  gap: 10px;
-}
-
-.loader-animation .dot {
-  width: 15px;
-  height: 15px;
-  background-color: #13344b; /* couleur principale */
+.circle-loader {
+  border: 5px solid #f3f3f3; /* Couleur fond cercle */
+  border-top: 5px solid #007bff; /* Couleur du loader */
   border-radius: 50%;
-  animation: bounce 3s infinite alternate;
+  width: 60px;
+  height: 60px;
+  animation: spin 3s linear infinite;
 }
 
-.loader-animation .dot:nth-child(2) {
-  animation-delay: 2s;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); 
 }
-
-.loader-animation .dot:nth-child(3) {
-  animation-delay: 3s;
-}
-
-@keyframes bounce {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: transl
-ateY(-20px);
-  }
 }
 </style>
+
 
 </head>
 <body>
 
   <!-- Professional Loader -->
 <div id="loader" style="position: fixed; top:0; left:0; width:100%; height:100%; background:#fff; display:flex; justify-content:center; align-items:center; z-index:9999;">
-  <div class="loader-animation">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-  </div>
+  <div class="circle-loader"></div>
 </div>
 
 
@@ -402,10 +384,10 @@ ateY(-20px);
   window.addEventListener('load', function() {
     const loader = document.getElementById('loader');
     loader.style.opacity = '0';
-    loader.style.transition = 'opacity 3s ease';
+    loader.style.transition = 'opacity 0.5s ease';
     setTimeout(() => loader.style.display = 'none', 500);
   });
-  </script>
+</script>
 
 </body>
 </html>
