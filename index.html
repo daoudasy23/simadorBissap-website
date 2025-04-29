@@ -21,134 +21,137 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .navbar {
-      background-color: #F5E8C9; /* Nouvelle couleur navbar */
-    }
-    .navbar .nav-link {
-      color: #4C7737; /* Couleur des liens */
-      font-weight: bold;
-    }
-    .navbar .nav-link.active,
-    .navbar .nav-link:hover {
-      color: #2c4f22; /* Légère variation au survol */
-    }
-    .text-icone {
-      color: black;
-    }
-    section {
-      background-color: #4C7737; /* Nouvelle couleur sections */
-      padding: 60px 0;
-      color: white;
-    }
-    footer {
-      background: #4C7737; /* même couleur footer que sections */
-      color: #F5E8C9;
-      padding: 30px 0;
-      text-align: center;
-      font-size: 14px;
-    }
-    .contact a {
-      text-decoration: none;
-      color: #F5E8C9;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-    }
-    .whatsapp-float img {
-      width: 50px;
-    }
-    .image-grid img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .image-grid img:hover {
-      transform: scale(1.05);
-    }
-    .navbar-nav .nav-link {
-      margin-right: 20px;
-    }
-    .hero .btn,
-    .btn.bg-footer {
-      background-color: #8B2D23;
-      color: #F5E8C9;
-      font-weight: bold;
-      border: 1px solid #F5E8C9;
-      transition: all 0.3s;
-    }
-    .hero .btn:hover,
-    .btn.bg-footer:hover {
-      background-color: #4C7737;
-      color: #F5E8C9;
-    }
-    .bg-footer {
-      background-color: #4C7737;
-      color: #F5E8C9;
-    }
-    /* Carousel Caption Style */
-    .carousel-caption {
-      bottom: 30%;
-    }
-    .carousel-caption h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      animation: fadeInDown 1s ease-in-out;
-    }
-    .carousel-caption p {
-      font-size: 1.2rem;
-      animation: fadeInUp 1s ease-in-out;
-    }
-    .carousel-caption .btn {
-      margin-top: 20px;
-    }
-    .carousel-item::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.4); /* Un peu plus clair pour mieux voir */
-      z-index: 1;
-    }
-    .carousel-caption {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 2;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    /* Loader */
-    #loader {
-      background-color: #F5E8C9;
-    }
-    .circle-loader {
-      border: 5px solid #fff;
-      border-top: 5px solid #4C7737;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 5s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+
+     body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: #F5E8C9;
+}
+.navbar .nav-link {
+  color: #455f18;
+  font-weight: bold;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #2c4f22;
+}
+.text-icone {
+  color: black;
+}
+section {
+  background-color: #455f18;
+  padding: 60px 0;
+  color: white;
+}
+footer {
+  background: #455f18;
+  color: #F5E8C9;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.contact a {
+  text-decoration: none;
+  color: #F5E8C9;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.whatsapp-float img {
+  width: 50px;
+}
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+.navbar-nav .nav-link {
+  margin-right: 20px;
+}
+.hero .btn,
+.btn.bg-footer {
+  background-color: #8B2D23;
+  color: #F5E8C9;
+  font-weight: bold;
+  border: 1px solid #F5E8C9;
+  transition: all 0.3s;
+}
+.hero .btn:hover,
+.btn.bg-footer:hover {
+  background-color: #455f18;
+  color: #F5E8C9;
+}
+.bg-footer {
+  background-color: #455f18;
+  color: #F5E8C9;
+}
+/* Carousel Caption Style */
+.carousel-caption {
+  bottom: 30%;
+}
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeInDown 1s ease-in-out;
+}
+.carousel-caption p {
+  font-size: 1.2rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+.carousel-caption .btn {
+  margin-top: 20px;
+}
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Loader */
+#loader {
+  background-color: #F5E8C9;
+}
+.circle-loader {
+  border: 5px solid #fff;
+  border-top: 5px solid #455f18;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    
+    
   </style>
 
 </head>
